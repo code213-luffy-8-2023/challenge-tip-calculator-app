@@ -63,6 +63,10 @@
   border: 2px solid red;
 }
 
+.input-wrapper input.error:focus {
+  border: 2px solid red;
+}
+
 .input-wrapper > span {
   position: absolute;
   top: 0.3em;

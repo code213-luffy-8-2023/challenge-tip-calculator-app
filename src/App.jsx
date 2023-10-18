@@ -55,6 +55,8 @@ function PersonIcon() {
 // this is an array of tip percentages, we use it to dynamically render the tip buttons
 const tips = [5, 10, 15, 25, 50];
 
+//0670048543
+
 function App() {
   // state variable that holds the bill value
   const [bill, setBill] = useState("");
@@ -134,7 +136,7 @@ function App() {
               <label htmlFor="people" className="label">
                 Number of People
               </label>
-              {numberOfPeople == 0 && (
+              {numberOfPeople == "0" && (
                 <span
                   style={{
                     color: "red",
@@ -148,7 +150,7 @@ function App() {
 
             <div className="input-wrapper">
               <input
-                className={`${numberOfPeople == 0 ? "error" : ""}`}
+                className={`${numberOfPeople == "0" ? "error" : ""}`}
                 value={numberOfPeople}
                 onChange={(e) => {
                   setNumberOfPeople(e.target.value);
