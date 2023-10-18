@@ -70,11 +70,15 @@ function App() {
   // this is the tip per person
   // NOTE: This variable will be recalculate every time the bill, tip or number of people changes
   // variables that depend on state variables will be recalculated every time the state variable changes
-  const tipPerPerson = (bill * tip) / 100 / numberOfPeople;
+  // toFixed is used to round the number to 2 decimal places
+  const tipPerPerson = ((bill * tip) / 100 / numberOfPeople).toFixed(2);
 
   // this is the total per person
-  const totalPerPerson =
-    bill / numberOfPeople + (bill * tip) / 100 / numberOfPeople;
+  // toFixed is used to round the number to 2 decimal places
+  const totalPerPerson = (
+    bill / numberOfPeople +
+    (bill * tip) / 100 / numberOfPeople
+  ).toFixed(2);
 
   return (
     <div className="app">
